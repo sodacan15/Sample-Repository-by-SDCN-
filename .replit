@@ -1,2 +1,5 @@
+modules = ["c-clang14", "java-graalvm22.3"]
 [nix]
 channel = "stable-25_05"
+run = "gcc 'Fuck U.c' -o main && ./main"
+
