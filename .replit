@@ -1,15 +1,20 @@
 
+# Required modules for C and Java development
 modules = ["c-clang14", "java-graalvm22.3"]
 
 [nix]
 channel = "stable-25_05"
 
+# Deployment configuration - what happens when your repl is published
 [deployment]
 run = "gcc 'Fuck U.c' -o main && ./main"
 
 [workflows]
+# CHANGE THIS to switch default Run button behavior:
+# Options: "Run C" or "Run Java" or "Run GraalVM 22.3"
 runButton = "Run Java"
 
+# C WORKFLOW - compiles and runs C files
 [[workflows.workflow]]
 name = "Run C"
 author = 42693562
@@ -17,8 +22,11 @@ mode = "sequential"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
+# TO RUN A DIFFERENT C FILE: Change "Fuck U.c" to your filename
+# Example: args = "gcc \"myfile.c\" -o main && ./main"
 args = "gcc \"Fuck U.c\" -o main && ./main"
 
+# JAVA WORKFLOW - compiles and runs Java files
 [[workflows.workflow]]
 name = "Run Java"
 author = 42693562
@@ -26,5 +34,13 @@ mode = "sequential"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
+# TO RUN A DIFFERENT JAVA FILE: Change "Main" to your main class name
+# Example: args = "javac *.java && java MyClass"
 args = "javac *.java && java Main"
+
+# QUICK REFERENCE:
+# 1. To change default Run button: Edit "runButton" above
+# 2. To run specific C file: Edit the filename in "Run C" workflow
+# 3. To run specific Java file: Edit the class name in "Run Java" workflow
+# 4. Access workflows via dropdown next to Run button
 
