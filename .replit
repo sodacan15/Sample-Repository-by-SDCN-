@@ -18,3 +18,12 @@ mode = "sequential"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "gcc \"Fuck U.c\" -o main && ./main"
+
+[[workflows.workflow]]
+name = "Run Java"
+author = 42693562
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "javac *.java && java Main"
