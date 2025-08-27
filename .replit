@@ -8,7 +8,7 @@ channel = "stable-25_05"
 run = "gcc 'Fuck U.c' -o main && ./main"
 
 [workflows]
-runButton = "Run C"
+runButton = "Run Java"
 
 [[workflows.workflow]]
 name = "Run C"
