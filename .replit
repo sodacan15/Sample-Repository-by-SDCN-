@@ -22,9 +22,9 @@ mode = "sequential"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-# TO RUN A DIFFERENT C FILE: Change "Fuck U.c" to your filename
+# TO RUN A DIFFERENT C FILE: Change "Sample Folder/Fuck U.c" to your filename
 # Example: args = "gcc \"myfile.c\" -o main && ./main"
-args = "gcc \"Fuck U.c\" -o main && ./main"
+args = "gcc \"Sample Folder/Fuck U.c\" -o main && ./main"
 
 # JAVA WORKFLOW - compiles and runs Java files
 [[workflows.workflow]]
