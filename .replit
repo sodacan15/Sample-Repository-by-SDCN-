@@ -6,3 +6,15 @@ channel = "stable-25_05"
 
 [deployment]
 run = "gcc 'Fuck U.c' -o main && ./main"
+
+[workflows]
+runButton = "Run C"
+
+[[workflows.workflow]]
+name = "Run C"
+author = 42693562
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "gcc \"Fuck U.c\" -o main && ./main"
