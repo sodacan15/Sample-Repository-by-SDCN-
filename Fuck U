@@ -1,6 +1,6 @@
 #include <stdio.h>
 
 int main () {
-  printf("Fuck You Bitch!");
-  printf("Stupid Hoe");
+  printf("This is a replit powred file. Fuck U.");
+  
 }
