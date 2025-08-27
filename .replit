@@ -7,9 +7,6 @@ channel = "stable-25_05"
 [deployment]
 run = "gcc 'Fuck U.c' -o main && ./main"
 
-[workflows]
-runButton = "Run Java"
-
 [[workflows.workflow]]
 name = "Run C"
 author = 42693562
@@ -19,11 +16,3 @@ mode = "sequential"
 task = "shell.exec"
 args = "gcc \"Fuck U.c\" -o main && ./main"
 
-[[workflows.workflow]]
-name = "Run Java"
-author = 42693562
-mode = "sequential"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "javac *.java && java Main"
