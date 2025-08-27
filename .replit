@@ -12,7 +12,7 @@ run = "gcc 'Fuck U.c' -o main && ./main"
 [workflows]
 # CHANGE THIS to switch default Run button behavior:
 # Options: "Run C" or "Run Java" or "Run GraalVM 22.3"
-runButton = "Run Java"
+runButton = "Run C"
 
 # C WORKFLOW - compiles and runs C files
 [[workflows.workflow]]
