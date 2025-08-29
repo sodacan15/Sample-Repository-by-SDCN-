@@ -36,7 +36,7 @@ mode = "sequential"
 task = "shell.exec"
 # TO RUN A JAVA FILE IN A FOLDER: Update the path to your folder
 # Example: args = "javac \"MyFolder/*.java\" && java -cp \"MyFolder\" Main"
-args = "javac \"Java Folder/Main.java\" && java -cp \"New Java Folder\" Main"
+args = "javac \"Java Folder/*.java\" && java -cp \"Java Folder\" Main"
 
 [agent]
 expertMode = true
