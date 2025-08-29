@@ -12,7 +12,7 @@ run = "gcc 'Fuck U.c' -o main && ./main"
 [workflows]
 # CHANGE THIS to switch default Run button behavior:
 # Options: "Run C" or "Run Java" or "Run GraalVM 22.3"
-runButton = "Run C"
+runButton = "Run Java"
 
 # C WORKFLOW - compiles and runs C files
 [[workflows.workflow]]
@@ -37,6 +37,9 @@ task = "shell.exec"
 # TO RUN A DIFFERENT JAVA FILE: Change "Main" to your main class name
 # Example: args = "javac *.java && java MyClass"
 args = "javac *.java && java Main"
+
+[agent]
+expertMode = true
 
 # QUICK REFERENCE:
 # 1. To change default Run button: Edit "runButton" above
