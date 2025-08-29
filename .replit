@@ -34,9 +34,9 @@ mode = "sequential"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-# TO RUN A DIFFERENT JAVA FILE: Change "Main" to your main class name
-# Example: args = "javac *.java && java MyClass"
-args = "javac *.java && java Main"
+# TO RUN A JAVA FILE IN A FOLDER: Update the path to your folder
+# Example: args = "javac \"MyFolder/*.java\" && java -cp \"MyFolder\" Main"
+args = "javac \"New Java Folder/*.java\" && java -cp \"New Java Folder\" Main"
 
 [agent]
 expertMode = true
